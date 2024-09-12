@@ -14,3 +14,6 @@ public static int sub(int e, int f){
 public static int add(int g, int h){
     return g + h;
 }
+public static int mod(int i, int j){
+    return i / j;
+}
