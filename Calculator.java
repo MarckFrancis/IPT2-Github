@@ -1,19 +1,48 @@
-import java.util.scanner;
-public class calculator{
+import java.util.Scanner;
 
-}
-public static int Divide(int a, int b){
-    return a % b;
-}
-public static int mul(int c, int d){
-    return c * d;
-}
-public static int sub(int e, int f){
-    return e - f;
-}
-public static int add(int g, int h){
-    return g + h;
-}
-public static int mod(int i, int j){
-    return i / j;
+public class Calculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String operator;
+        double num1, num2, result;
+
+        System.out.println("Welcome to the Simple Calculator");
+        System.out.println("Enter the first number:");
+        num1 = scanner.nextDouble();
+
+        System.out.println("Enter the operator (+, -, *, /):");
+        operator = scanner.next();
+
+        System.out.println("Enter the second number:");
+        num2 = scanner.nextDouble();
+
+        switch (operator) {
+            case "+":
+                result = num1 + num2;
+                System.out.printf("%.2f + %.2f = %.2f\n", num1, num2, result);
+                break;
+            case "-":
+                result = num1 - num2;
+                System.out.printf("%.2f - %.2f = %.2f\n", num1, num2, result);
+                break;
+            case "*":
+                result = num1 * num2;
+                System.out.printf("%.2f * %.2f = %.2f\n", num1, num2, result);
+                break;
+            case "/":
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    System.out.printf("%.2f / %.2f = %.2f\n", num1, num2, result);
+                } else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                }
+                break;
+            default:
+                System.out.println("Error: Invalid operator. Please use +, -, *, or /.");
+                break;
+        }
+
+        scanner.close();
+    }
 }
