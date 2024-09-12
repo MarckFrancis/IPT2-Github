@@ -11,3 +11,6 @@ public static int mul(int c, int d){
 public static int sub(int e, int f){
     return e - f;
 }
+public static int add(int g, int h){
+    return g + h;
+}
